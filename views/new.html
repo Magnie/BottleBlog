@@ -1,0 +1,19 @@
+<script src="/static/nicEdit.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+<div class="post color_one">
+    <div class="post_info">
+        <div class="post_title">New Post</div>
+    </div><br />
+    <div class="post_html">
+        <form method="post" action="/new">
+            <p>
+                Title: <input type="text" name="title" value="" /><br />
+                Content:<br />
+                <textarea rows="10" cols="75" name="html">
+                </textarea><br />
+                <input type="submit" value="Edit Post" />
+            </p>
+        </form>
+    </div>
+</div>

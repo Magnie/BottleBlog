@@ -1,0 +1,18 @@
+%setdefault('color', 0)
+%setdefault('admin', False)
+<div class="post {{'color_two' if color else 'color_one'}}">
+    <div class="post_info">
+        <a class="post_title" href="/view/{{int(post['id'])}}">
+            {{post['title']}}
+        </a>
+        <br />
+        {{post['author']}} - {{post['date']}}
+        %if admin:
+            - <a href="/edit/{{int(post['id'])}}">Edit</a>
+            - <a href="/delete/{{int(post['id'])}}">Delete</a>
+        %end
+    </div><br />
+    <div class="post_html">
+        {{!post['html']}}
+    </div>
+</div>

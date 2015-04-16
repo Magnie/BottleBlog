@@ -1,0 +1,10 @@
+%if admin:
+    %include('home_admin.html')
+%end
+<div id="posts">
+    %color = 0
+    %for post in posts:
+        %include('view.html', post=post, color=color)
+        %color = (color + 1) % 2
+    %end
+</div>

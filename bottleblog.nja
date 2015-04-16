@@ -1,0 +1,6 @@
+{
+  "venv": "", 
+  "name": "BottleBlog", 
+  "license": "GNU General Public License v3", 
+  "description": "A blog using Bottle and MongoDB."
+}

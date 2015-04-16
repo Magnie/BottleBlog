@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="/static/global.css">
+    </head>
+
+    <body>
+        <div id="navbar">
+            <div id="nav_logo">
+                <div id="logo_title">Joseph Augustine</div>
+                <div id="logo_slogan">Sterling Scholar</div>
+            </div>
+            <div id="nav_content">
+            %for entry in menu:
+                {{!"<a href=\"{0}\">{1}</a>".format(entry['path'], entry['title'])}}
+            %end
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="content_header">
+                <img src="/static/clouds.jpg" width="100%"/>
+            </div>
+            %if defined("kwargs"): include(content, **kwargs)
+            %else: include(content)
+            %end
+        </div>
+
+        <div id="footer">
+            Powered By: BottleBlog |
+            Magnie Mozios &copy; 2014 |
+            <a href="/login">Admin Login</a> |
+            <a href="/logout">Logout</a>
+        </div>
+    </body>
+</html>

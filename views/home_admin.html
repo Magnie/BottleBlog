@@ -1,0 +1,21 @@
+<script src="/static/nicEdit.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+<div id="admin" class="color_two">
+    <form method="POST", action="/menu">
+    </form>
+    <form method="POST", action="/new">
+        <p>
+            Title: <br />
+            <input type="text" name="title" /><br />
+
+            Content:<br />
+            <textarea rows="10" cols="100" name="html">
+            </textarea>
+            <br />
+
+            Visible on Home: <input type="checkbox" name="visible" checked /><br />
+            <input type="submit" value="Add Post" />
+        </p>
+    </form>
+</div>
